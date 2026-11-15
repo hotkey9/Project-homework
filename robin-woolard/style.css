@@ -1,0 +1,693 @@
+/* Сброс стандартных отступов */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  color: #222;
+  background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ---------- Верхняя полоса ---------- */
+.top-bar {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  font-size: 11px;
+  padding: 5px 0;
+}
+
+/* ---------- Шапка ---------- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 85px;
+  height: 54px;
+}
+
+.header-left {
+  width: 260px;
+  font-size: 16px;
+}
+
+.logo {
+  text-align: center;
+}
+
+.logo a {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 26px;
+  letter-spacing: 1px;
+  display: block;
+  line-height: 1;
+}
+
+.logo span {
+  font-size: 6px;
+  letter-spacing: 1px;
+}
+
+.header-right {
+  width: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+}
+
+.search {
+  display: flex;
+  border-bottom: 1px solid #333;
+  flex: 1;
+}
+
+.search input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-family: inherit;
+  font-size: 9px;
+  padding: 4px 0;
+}
+
+.search button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.icon {
+  font-size: 13px;
+}
+
+/* ---------- Меню ---------- */
+.menu {
+  background-color: #3a3a3a;
+  height: 35px;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: center;
+  gap: 95px;
+  height: 100%;
+  align-items: center;
+}
+
+.menu a {
+  color: #fff;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Большая картинка ---------- */
+.hero {
+  position: relative;
+  height: 286px;
+  background-color: #141414;
+  background-image: url("images/hero-ring.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 44%;
+}
+
+.hero-buttons {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 14px;
+}
+
+.hero-buttons button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.appointment {
+  position: absolute;
+  bottom: 12px;
+  right: 85px;
+  color: #fff;
+  font-size: 10px;
+}
+
+/* ---------- Блок "О мастере" ---------- */
+.about {
+  max-width: 660px;
+  margin: 0 auto;
+  padding: 55px 0 40px;
+  text-align: center;
+}
+
+.about-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 660px;
+  margin: 0 auto 40px;
+}
+
+.about-title .line {
+  flex: 1;
+  height: 1px;
+  background-color: #ccc;
+}
+
+.about-title h1 {
+  font-family: 'Bodoni Moda', serif;
+  font-weight: 400;
+  font-size: 34px;
+}
+
+.about p {
+  font-size: 10px;
+  line-height: 1.4;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 5px;
+  padding: 10px 28px;
+  border: 1px solid #333;
+  font-size: 11px;
+  color: #222;
+}
+
+.read-more:hover {
+  background-color: #222;
+  color: #fff;
+}
+
+/* ---------- Блок "Our Custom Service" ---------- */
+.services {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #000;
+}
+
+.service-photo {
+  aspect-ratio: 477 / 384;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.photo-bracelet {
+  background-image: url("images/photo-bracelet.jpg");
+  background-position: center 51%;
+}
+
+.photo-ring-hands {
+  background-image: url("images/photo-ring-hands.jpg");
+  background-position: center;
+}
+
+.service-text {
+  aspect-ratio: 477 / 384;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 35px 40px 45px 80px;
+}
+
+/* у правого блока отступ слева поменьше, как на макете */
+.service-text:nth-child(2) {
+  padding-left: 37px;
+}
+
+.jewel {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
+.jewel-bracelet {
+  width: 28vw;
+  aspect-ratio: 931 / 466;
+  background-image: url("images/jewel-bracelet.png");
+}
+
+.jewel-ring {
+  width: 12.5vw;
+  aspect-ratio: 701 / 880;
+  margin-top: 10px;
+  background-image: url("images/jewel-ring.png");
+}
+
+.service-info h2 {
+  font-weight: 400;
+  font-size: 17px;
+  margin-bottom: 18px;
+}
+
+.service-info p {
+  font-size: 10px;
+  line-height: 1.5;
+  color: #ccc;
+  max-width: 360px;
+  margin-bottom: 20px;
+}
+
+.service-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 22px;
+  padding: 9px 10px;
+  border: 1px solid #aaa;
+  color: #fff;
+  font-size: 9px;
+}
+
+.service-btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* ---------- Общий контейнер ---------- */
+.container {
+  width: 82%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ---------- Категории ---------- */
+.categories {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.category {
+  position: relative;
+  aspect-ratio: 165 / 190;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+}
+
+.category span {
+  position: absolute;
+  bottom: 9%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  color: #000;
+}
+
+.category:hover {
+  background-color: #f3f3f3;
+}
+
+.cat-rings {
+  background-image: url("images/cat-ring.jpg");
+  background-size: 58% auto;
+  background-position: center 40%;
+}
+
+.cat-earrings {
+  background-image: url("images/cat-earrings.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.cat-bracelets {
+  background-image: url("images/cat-bracelet.png");
+  background-size: 66% auto;
+  background-position: center 33%;
+}
+
+.cat-necklaces {
+  background-image: url("images/cat-necklace.png");
+  background-size: auto 67%;
+  background-position: center 12%;
+}
+
+/* ---------- Вторая сетка (картинки) ---------- */
+.photo-necklace {
+  background-image: url("images/photo-necklace.jpg");
+  background-position: center 23%;
+}
+
+.photo-bracelet-wear {
+  background-image: url("images/photo-bracelet-wear.jpg");
+  background-position: center 36%;
+}
+
+.jewel-chain {
+  width: 14vw;
+  aspect-ratio: 782 / 874;
+  background-image: url("images/jewel-chain.png");
+}
+
+.jewel-bracelet2 {
+  width: 15vw;
+  aspect-ratio: 1187 / 1138;
+  background-image: url("images/jewel-bracelet2.png");
+}
+
+/* ---------- Bestsellers ---------- */
+.bestsellers {
+  padding-top: 65px;
+}
+
+.bestsellers-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #222;
+  padding-bottom: 14px;
+}
+
+.bestsellers-head h2 {
+  font-family: 'Bodoni Moda', serif;
+  font-weight: 400;
+  font-size: 32px;
+  letter-spacing: 1px;
+}
+
+.arrows {
+  display: flex;
+  gap: 8px;
+}
+
+.arrow {
+  width: 44px;
+  height: 32px;
+  border: none;
+  background-color: #f0f0f0;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.arrow-disabled {
+  background: none;
+  color: #bbb;
+  cursor: default;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 40px;
+}
+
+.product-img {
+  display: block;
+  aspect-ratio: 640 / 630;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.prod-emerald {
+  background-image: url("images/prod-emerald.jpg");
+}
+
+.prod-ruby {
+  background-image: url("images/prod-ruby.jpg");
+}
+
+.prod-aqua {
+  background-image: url("images/prod-aqua.jpg");
+}
+
+.prod-sapphire {
+  background-image: url("images/prod-sapphire.jpg");
+}
+
+.product-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: 22px;
+}
+
+.product-name {
+  font-size: 10px;
+}
+
+.product-price {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* ---------- Отзыв ---------- */
+.review {
+  padding-top: 50px;
+}
+
+.quote-mark {
+  font-family: 'Bodoni Moda', serif;
+  font-weight: 500;
+  font-size: 60px;
+  line-height: 0.8;
+  height: 36px;
+}
+
+.review h3 {
+  font-size: 13px;
+  font-weight: 500;
+  margin: 18px 0 20px;
+}
+
+.review p {
+  font-size: 9.5px;
+  line-height: 1.7;
+  color: #777;
+  margin-bottom: 22px;
+}
+
+.review-author {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.review-author .dash {
+  width: 36px;
+  height: 1px;
+  background-color: #222;
+}
+
+/* ---------- Награды ---------- */
+.badges {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+  padding: 50px 0;
+}
+
+.badge {
+  height: 56px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.badge-gia {
+  aspect-ratio: 200 / 60;
+  height: auto;
+  width: 120px;
+  background-image: url("images/badge-gia.png");
+}
+
+.badge-jewelers {
+  aspect-ratio: 200 / 102;
+  width: 105px;
+  height: auto;
+  background-image: url("images/badge-jewelers.png");
+}
+
+.badge-wja {
+  aspect-ratio: 200 / 71;
+  width: 105px;
+  height: auto;
+  background-image: url("images/badge-wja.png");
+}
+
+/* ---------- Подписка ---------- */
+.newsletter {
+  background-color: #020302;
+  background-image: url("images/newsletter-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  padding: 48px 0;
+}
+
+.newsletter-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.newsletter-text {
+  width: 34%;
+}
+
+.newsletter-text h3 {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.newsletter-text p {
+  font-size: 9px;
+  line-height: 1.5;
+  color: #ddd;
+}
+
+.newsletter-form {
+  display: flex;
+  width: 58%;
+}
+
+.newsletter-form input {
+  flex: 1;
+  height: 32px;
+  padding: 0 10px;
+  border: 1px solid #777;
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-family: inherit;
+  font-size: 9px;
+  outline: none;
+}
+
+.newsletter-form input::placeholder {
+  color: #ccc;
+}
+
+.newsletter-form button {
+  width: 130px;
+  height: 32px;
+  border: none;
+  background-color: #fff;
+  color: #000;
+  font-family: inherit;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+/* ---------- Подвал ---------- */
+.footer {
+  padding: 30px 0 30px;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: start;
+}
+
+.footer-logo a {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 22px;
+  letter-spacing: 0.5px;
+  display: block;
+  line-height: 1;
+}
+
+.footer-logo span {
+  display: block;
+  text-align: center;
+  font-size: 5px;
+  letter-spacing: 1px;
+  margin-top: 2px;
+}
+
+.footer-photo {
+  width: 86%;
+  aspect-ratio: 118 / 52;
+  margin-top: 10px;
+  background-size: cover;
+  background-position: center;
+}
+
+.footer-hotel {
+  background-image: url("images/footer-hotel.jpg");
+}
+
+.footer-shop {
+  background-image: url("images/footer-shop.jpg");
+  margin-top: 4px;
+}
+
+.footer-col h4 {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin-bottom: 14px;
+  padding-top: 4px;
+}
+
+.footer-col li {
+  font-size: 9.5px;
+  line-height: 21px;
+  color: #666;
+}
+
+.footer-col li a:hover {
+  color: #000;
+}
+
+.contact-item {
+  display: flex;
+  gap: 10px;
+  font-size: 9.5px;
+  line-height: 1.45;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.contact-icon {
+  width: 14px;
+  flex-shrink: 0;
+  color: #000;
+  font-size: 11px;
+}
+
+.social {
+  display: flex;
+  gap: 14px;
+  margin-top: 14px;
+  font-size: 11px;
+}
+
